@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Rogue App</title>
+  <script src="https://unpkg.com/react/umd/react.production.min.js" crossorigin> </script>
+  <script
+  src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"
+  crossorigin
+></script>
+<script
+  src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js"
+  crossorigin
+ > </script>
+  <link
+  rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+  crossorigin="anonymous"
+/>
+</head>
+
+<body>
+  <!-- Load the application -->
+  <script src="/dist/common-dependencies.js"></script>
+  <script src="/dist/root-application.js"></script>
+
+  <!-- Static navbar -->
+  <style>
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #111D4A;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      width: 100%;
+      height: 75px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .navbar ul {
+      display: flex;
+      align-items: center;
+      list-style-type: none;
+      height: 100%;
+    }
+    
+    .navbar li {
+      padding-right: 24px;
+      height: 100%;
+    }
+    
+    .navbar li:hover {
+      opacity: 0.8;
+    }
+    
+    .navbar a {
+      text-decoration: none;
+      color: white;
+    }
+  </style>
+  <div class="navbar">
+    <ul>
+      <a onclick="singleSpaNavigate('/login')">
+        <li>
+          login
+        </li>
+      </a>
+      <a onclick="singleSpaNavigate('/upload')">
+        <li>
+          Upload
+        </li>
+      </a>
+    </ul>
+  </div>
+</body>
+
+</html>
