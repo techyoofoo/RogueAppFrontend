@@ -5,7 +5,8 @@ export default class Root extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      file: null
+      file: null,
+      txtPluginName: ""
     };
     this.onFormSubmit = this.onFormSubmit.bind(this);
     this.onChange = this.onChange.bind(this);
@@ -14,6 +15,7 @@ export default class Root extends React.Component {
     e.preventDefault();
     const formData = new FormData();
     formData.append("myImage", this.state.file);
+    formData.append("pluginName", this.state.txtPluginName);
     const config = {
       headers: {
         "content-type": "multipart/form-data"
@@ -38,6 +40,14 @@ export default class Root extends React.Component {
         <div style={{ marginTop: "100px" }}></div>
         <h1>File Upload</h1>
         <input type="file" name="myImage" onChange={this.onChange} />
+        <div className="row">
+          <div className="col-sm-2">
+            <label>Plugin Name</label>
+          </div>
+          <div className="col-sm-2">
+            <input type="text" placeholder="Enter Plugin Name" onChange={(e) => this.setState({txtPluginName:e.target.value})} />
+          </div>
+        </div>
         <button type="submit">Upload</button>
       </form>
     );
