@@ -20,6 +20,9 @@ singleSpa.registerApplication(
 // singleSpa.registerApplication('uninstall-3', () =>  
 //   import ('../un-install/un-install.js'), pathPrefix('/uninstall'));
 
+singleSpa.registerApplication('plugin-1', () =>
+  import('../plugin/pulgin-form.js'), pathPrefix('/plugin'));
+
 singleSpa.start();
 
 function pathPrefix(prefix) {
