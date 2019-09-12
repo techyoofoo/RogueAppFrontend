@@ -8,6 +8,7 @@ const reactLifecycles = singleSpaReact({
   ReactDOM,
   rootComponent: Root,
   domElementGetter,
+  appName:"Myapp",
 });
 
 export function bootstrap(props) {
