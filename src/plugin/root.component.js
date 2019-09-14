@@ -41,6 +41,11 @@ export default class Root extends React.Component {
       alert("Selct a file"); 
       return false;
     }
+    const types = ['application/x-zip-compressed']
+    if (types.every(type =>this.state.file.type !== type)) {
+      alert('File format not supported');
+      return;
+    }
     return true;
 }
 
