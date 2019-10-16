@@ -65,11 +65,11 @@ export default class Root extends React.Component {
     axios.post("http://localhost:4000/rouge/server/testconnection", JSON.stringify(this.state), config)
       .then(response => {
         if (response.data) {
-          alert('Valid Connection');
+          alert('Test connection succeeded');
 
         }
         else {
-          alert('Invalid Credentials');
+          alert('Test connection failed');
         }
       })
       .catch(error => { });
