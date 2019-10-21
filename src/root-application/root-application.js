@@ -26,6 +26,9 @@ singleSpa.registerApplication('plugin-1', () =>
   singleSpa.registerApplication('server-1', () =>
   import('../server/server-form.js'), pathPrefix('/server'));
 
+  singleSpa.registerApplication('commission-1', () =>
+  import('../commission/commission-form.js'), pathPrefix('/commission'));
+
 singleSpa.start();
 
 function pathPrefix(prefix) {
